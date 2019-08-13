@@ -2,16 +2,20 @@
 
 module.exports = {
   development: {
-    client: 'sqlite3',
+    // driver to use
+    client: "sqlite3",
+    // how to find the database
     connection: {
-      filename: './data/produce.db3',
+      // from the root folder
+      filename: "./data/car-dealer.db3",
     },
+    // require for sqlite
     useNullAsDefault: true,
     migrations: {
-      directory: './data/migrations',
+      directory: "./data/migrations",
     },
     seeds: {
-      directory: './data/seeds',
+      directory: "./data/seeds",
     },
   },
 };

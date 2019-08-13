@@ -1,7 +1,7 @@
 const express = require('express');
 const helmet = require('helmet');
 
-const fruitsRouter = require('../fruits/fruits-router.js');
+const carsRouter = require('../cars/cars-router.js');
 
 const server = express();
 
@@ -11,7 +11,7 @@ server.use(helmet());
 server.use(express.json());
 
 // use server url,
-server.use('/api/fruits', fruitsRouter);
+server.use('/api/cars', carsRouter);
 
-// export to index 
+// export to index
 module.exports = server;
